@@ -1,0 +1,14 @@
+<!-- calculate current tab, based on opened page url, no matter it's a pill or tab -->
+{% for tab in site.data.tabs %}
+	{% if tab.url == page.url %}
+		{% assign currentTab = tab %}
+		{% break %}
+	{% endif %}
+
+	{% for pill in tab.pills %}
+		{% if pill.url == page.url %}
+			{% assign currentTab = tab %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}

@@ -1,0 +1,128 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: $font-size-h1;
+    color: $dark-blue-color;
+    font-weight: 100;
+    padding-top: 31px;
+    @media #{$xs} {
+        font-size: $font-size-h1-mobile;
+    }
+}
+h2 {
+    font-size: $font-size-h2;
+    color: $white-color;
+}
+h3 {
+    font-size: $font-size-h3;
+    color: $white-color;
+    @media #{$xs} {
+        font-size: $font-size-h4;
+    }
+}
+h4 {
+    font-size: $font-size-h4;
+    color: $dark-blue-color;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p {
+    color: $text-color;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+small {
+    font-size: $font-size-small;
+    color: $text-small-color;
+}
+a {
+    text-decoration: none;
+    color: $link-color;
+    font-size: $font-size-base;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Basic styling
+ */
+body {
+    background-color: $background-color;
+    font-family: $font-family-base;
+}
+body,
+html {
+    position: relative;
+    height: 100%;
+}
+
+
+.bg-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    h1 {
+        text-shadow:  0px 0px 17px rgb(255, 255, 255);
+    }
+}
+.v-center {
+    display: table;
+    @media #{$xs} {
+       display: block;
+    }
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+        @media #{$xs} {
+            display: block;
+        }
+    }
+}
+
+.trash-service{
+    padding: 15px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.83);
+    width: 275px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    -webkit-box-shadow: -2px -1px 34px -2px rgba(0,0,0,0.47);
+    -moz-box-shadow: -2px -1px 34px -2px rgba(0,0,0,0.47);
+    box-shadow: -2px -1px 34px -2px rgba(0,0,0,0.47);
+    h4 {
+        margin-bottom: 10px;
+    }
+    a {
+        border: 1px solid $green-color;
+        padding: 5px 0;
+        width: 115px;
+        font-size: $font-size-base;
+        color: $text-color;
+        border-radius: 2px;
+        margin-right: 5px;
+    }
+}
+
+.dark-blue-box {
+    background-color: $dark-blue-color;
+    padding: 25px;
+
+}
+
+/**
+*Button
+**/
+.btn {
+    border-radius: 0;
+}

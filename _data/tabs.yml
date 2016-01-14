@@ -1,0 +1,20 @@
+- name: Construction & Demolition
+  url: /construction-demolition.html
+
+- name: Household
+  url: /household.html
+
+- name: Recycling
+  url: /recycling.html
+
+- name: Storage Containers
+  url: /storage-containers.html
+
+- name: FAQs
+  url: /faq.html
+
+- name: About
+  url: /about.html
+
+- name: Contact
+  url: /contact.html
