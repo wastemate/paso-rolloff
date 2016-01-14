@@ -1,6 +1,6 @@
 # Site settings
 title: Paso Robles Roll-Off & Recycle
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/paso-rolloff" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Build settings
