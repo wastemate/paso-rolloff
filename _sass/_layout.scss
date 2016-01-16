@@ -68,9 +68,18 @@
                     text-transform: capitalize;
                     color: $link-color;
                     font-size: $font-size-base;
+                    padding-bottom: 5px;
+
+
                     @media #{$sm} {
                         font-size: 11px;
                     }
+                }
+                a:hover {
+                    border-bottom: 1px solid $light-blue-color;
+                }
+                &.active a  {
+                    border-bottom: 1px solid $light-blue-color;
                 }
             }
             .btn-header {
@@ -119,12 +128,37 @@
     }
 }
 
+/********** recycling page *********/
+.recycling-bg {
+    background-image: url(../assets/recycling-bg.jpg);
+}
+/********** household page *********/
+.household-bg {
+    background-image: url(../assets/household-bg.jpg);
+}
+
+/********** Construction page *********/
+.construction-bg {
+    background-image: url(../assets/construction-bg.jpg);
+}
+/********** About page *********/
+.about-bg {
+    background-image: url(../assets/about-bg.jpg);
+}
+
+/********** Contact page *******/
+.contact-bg {
+    background-image: url(../assets/contact-bg.jpg);
+    background-position: bottom;
+}
+
 
 /**
  * Site footer
  */
 footer {
     padding: 20px 0;
+    background-color: $background-color;
     @media #{$xs} { 
         text-align: center;
     }
