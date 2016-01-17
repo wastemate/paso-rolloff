@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{% include head.html %}
+
+<body>
+
+	{% include header.html %}
+
+	<div class="v-center bg-cover text-center" style="background: url('{{ page.main-bg }}') bottom/cover;">
+		{% include trash-service.html %}
+	</div>
+
+	<div class="dark-blue-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+					<h3>{{ page.title }}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container content-padding">
+		<div class="row">	
+			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+				<div class="row">
+				{% if page.structure == "main-structure" %}
+					<div class="col-sm-7">
+						{{ content }}
+					</div>
+
+					<div class="col-sm-5">
+					{% for products in page.products %}
+						<div class="gray-box">
+							<div class="yard-box"><p>{{ products.name }}</p></div>
+							<img src="{{ products.image }}">
+							<p>{{ products.description }}</p>
+						</div>
+					{% endfor %}
+					</div>
+
+				{% elsif page.structure == "full-width" %}
+					<div class="col-sm-12">
+						{{ content }}
+					</div>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include footer.html %}
+
+	{% include foot.html %}
+
+</body>
+</html>
