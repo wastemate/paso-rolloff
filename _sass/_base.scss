@@ -44,6 +44,7 @@ h6 {
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 10px;
+    margin-bottom: 5px;
     color: $green-color;
 }
 p {
@@ -179,10 +180,9 @@ ul {
     }
     .yard-box {
         background-color: $white-color;
-        width: 75px;
+        padding: 7px 20px;
         border-radius: 2px;
         border: 1px solid #9AD7DA;
-        padding: 7px;
         display: inline-block;
     }
 }
