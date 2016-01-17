@@ -7,7 +7,7 @@
 
 	{% include header.html %}
 
-	<div class="v-center bg-cover text-center" style="background: url('{{ page.main-bg }}') bottom/cover;">
+	<div class="v-center bg-cover text-center" style="background: url('{{ page.main-bg | prepend: site.baseurl }}') bottom/cover">
 		{% include trash-service.html %}
 	</div>
 
@@ -34,16 +34,23 @@
 					{% for products in page.products %}
 						<div class="gray-box">
 							<div class="yard-box"><p>{{ products.name }}</p></div>
-							<img src="{{ products.image }}">
+							<img src="{{ products.image | prepend: site.baseurl }}">
 							<p>{{ products.description }}</p>
 						</div>
 					{% endfor %}
 					</div>
 
+
 				{% elsif page.structure == "full-width" %}
 					<div class="col-sm-12">
 						{{ content }}
 					</div>
+
+				{% else %}
+					<div class="col-sm-7">
+						{{ content }}
+					</div>
+				
 				{% endif %}
 				</div>
 			</div>

@@ -78,7 +78,13 @@ html {
     position: relative;
     height: 100%;
 }
-
+iframe {
+    width: 345; 
+    height: 180;
+    @media #{$xs} {
+        width: 100%;
+    }
+}
 .semibold {
     font-weight: 600;
     margin: 0;
@@ -123,6 +129,9 @@ html {
     background-color: #E2F3F4;
     border-radius: 6px;
     padding: 15px;
+    @media #{$xs} { 
+        margin-top: 15px;
+    }
     span {
         font-weight: 600;
         font-size: $font-size-base;
